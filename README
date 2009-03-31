@@ -1,0 +1,8 @@
+POE::Filter::CSV_XS
+===================
+
+A POE-based parser for CSV files, suitable for use with POE::Filter::Stackable and POE::Filter::Line.
+
+See examples/ for ideas.
+
+>:o)
