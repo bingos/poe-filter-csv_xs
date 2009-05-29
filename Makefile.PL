@@ -1,12 +1,16 @@
+use strict;
 use inc::Module::Install;
 name 'POE-Filter-CSV_XS';
 author 'Chris Williams <chris@bingosnet.co.uk>';
 license 'perl';
+auto_license holder => 'Chris Williams';
 version_from 'lib/POE/Filter/CSV_XS.pm';
 abstract_from 'lib/POE/Filter/CSV_XS.pm';
+perl_version '5.006';
 build_requires 'Test::More' => 0.47;
-requires 'warnings::compat' => 0 if $] < 5.006;
-requires 'Text::CSV_XS' => 0.30;
+requires 'Text::CSV_XS' => 0.65;
 requires 'POE' => 0.38;
 requires 'POE::Filter' => 0;
+auto_provides;
+githubmeta;
 WriteAll();

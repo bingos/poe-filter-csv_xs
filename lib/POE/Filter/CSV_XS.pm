@@ -13,7 +13,7 @@ use Text::CSV_XS;
 use vars qw($VERSION);
 use base qw(POE::Filter);
 
-$VERSION = '1.12';
+$VERSION = '1.16';
 
 sub new {
   my $class = shift;
@@ -98,7 +98,7 @@ put to is in the examples/ directory of this distribution.
 
 =over
 
-=item new
+=item C<new>
 
 Creates a new POE::Filter::CSV_XS object. Any given arguments are passed to the constructor for
 L<Text::CSV_XS>, consult the documentation for that module.
@@ -109,16 +109,16 @@ L<Text::CSV_XS>, consult the documentation for that module.
 
 =over
 
-=item get
+=item C<get>
 
-=item get_one_start
+=item C<get_one_start>
 
-=item get_one
+=item C<get_one>
 
 Takes an arrayref which is contains lines of CSV formatted input. Returns an arrayref of lists of
 fields.
 
-=item put
+=item C<put>
 
 Takes an arrayref containing arrays of fields and returns an arrayref containing CSV formatted lines.
 
@@ -126,11 +126,11 @@ Takes an arrayref containing arrays of fields and returns an arrayref containing
 
 =head1 AUTHOR
 
-Chris "BinGOs" Williams
+Chris C<BinGOs> Williams
 
 =head1 LICENSE
 
-Copyright (C) Chris Williams
+Copyright E<copy> Chris Williams
 
 This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 

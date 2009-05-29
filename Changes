@@ -1,6 +1,10 @@
 POE::Filter::CSV_XS
 ===================
 
+1.16	Fri May 29 13:52:00 BST 2009
+	- Makefile.PL meta updates
+	- Sync version with POE::Filter::CSV
+
 1.12	Tue Jun 24 13:14:53 BST 2008
 	- Added LICENSE information.
 
