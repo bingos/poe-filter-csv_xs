@@ -7,13 +7,12 @@
 
 package POE::Filter::CSV_XS;
 
+#ABSTRACT: A POE-based parser for CSV based files.
+
 use strict;
 use warnings;
 use Text::CSV_XS;
-use vars qw($VERSION);
 use base qw(POE::Filter);
-
-$VERSION = '1.16';
 
 sub new {
   my $class = shift;
@@ -63,7 +62,7 @@ sub put {
       my $status = $self->{csv_filter}->combine(@$event);
       push @$raw_lines, $self->{csv_filter}->string() if $status;
 
-    } 
+    }
     else {
 	warn "non arrayref passed to put()\n";
     }
@@ -71,12 +70,9 @@ sub put {
   return $raw_lines;
 }
 
-1;
-__END__
+qq[let,us,csv,xs];
 
-=head1 NAME
-
-POE::Filter::CSV_XS - A POE-based parser for CSV based files.
+=pod
 
 =head1 SYNOPSIS
 
@@ -123,16 +119,6 @@ fields.
 Takes an arrayref containing arrays of fields and returns an arrayref containing CSV formatted lines.
 
 =back
-
-=head1 AUTHOR
-
-Chris C<BinGOs> Williams
-
-=head1 LICENSE
-
-Copyright E<copy> Chris Williams
-
-This module may be used, modified, and distributed under the same terms as Perl itself. Please see the license that came with your Perl distribution for details.
 
 =head1 SEE ALSO
 
